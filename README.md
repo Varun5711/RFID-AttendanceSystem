@@ -201,5 +201,5 @@ Apache 2.0 License - See [LICENSE](LICENSE) for details.
 
 ---
 
-**Made with ❤️ by [Varun Hotani]**  
-*Need help?* ✉️ [varunhotani@icloud.com]
+Made with ❤️ by **Varun Hotani**  
+Need help?**✉️ varunhotani@icloud.com**
