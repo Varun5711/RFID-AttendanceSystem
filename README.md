@@ -46,12 +46,105 @@ A smart attendance tracking system using RFID technology with visual (LCD) and a
    - Negative (-) → GND
 
 ### Software Setup
-1. Install required libraries:
-   ```bash
-   Arduino Library Manager > Install:
-   - MFRC522 by Miguel Balboa
-   - LiquidCrystal_I2C by Frank de Brabander
+Here's the updated PLX-DAQ specific section for your README.md with proper credit to NetDevil's implementation:
 
+```markdown
+## 📈 Excel Integration via PLX-DAQ (NetDevil Version)
+
+**Real-Time Excel Logging Made Easy**  
+![PLX-DAQ Workflow](https://via.placeholder.com/800x400.png?text=PLX-DAQ+Excel+Integration)
+
+### ⚡ PLX-DAQ Setup Guide
+1. **Download PLX-DAQ**
+   - Get NetDevil's PLX-DAQ from [Official Repository](https://example.com/plx-daq-netdevil) *(replace with actual link)*
+   - Extract the `.zip` file containing:
+     - `PLX-DAQ.xlam` (Excel Add-in)
+     - `PLX-DAQ Macro Enabled Workbook.xlsm`
+
+2. **Excel Configuration**
+   ```excel
+   1. Open PLX-DAQ.xlsm
+   2. Enable macros when prompted
+   3. Go to PLX-DAQ tab
+   4. Set Baud Rate: 9600
+   5. Select correct COM port
+   6. Click "Connect"
+   ```
+
+3. **Arduino Code Integration**
+   ```arduino
+   void setup() {
+     // PLX-DAQ initialization commands
+     Serial.println("CLEARSHEET");         // Clear existing data
+     Serial.println("LABEL,Date,Time,Name,Department,Status");
+   }
+
+   void logAttendance(String status) {
+     // PLX-DAQ compatible format
+     Serial.print("DATA,DATE,TIME,");      // Auto-timestamp keywords
+     Serial.print("Varun,CSE,");           // User data
+     Serial.println(status);               // IN/OUT status
+   }
+   ```
+
+### 🔄 Data Flow Architecture
+```mermaid
+sequenceDiagram
+    participant RFID Tag
+    participant Arduino
+    participant PLX-DAQ
+    participant Excel
+
+    RFID Tag->>Arduino: Send UID
+    Arduino->>PLX-DAQ: "CLEARSHEET"
+    Arduino->>PLX-DAQ: "LABEL,..."
+    Arduino->>PLX-DAQ: "DATA,..."
+    PLX-DAQ->>Excel: Real-time Update
+    Excel->>User: Auto-populated Table
+```
+
+### 🛠️ PLX-DAQ Troubleshooting
+| Issue | Solution |
+|-------|----------|
+| "CLEARSHEET" not working | Enable macro execution in Excel Trust Center |
+| Time not updating | Add `=NOW()` in Excel timestamp column |
+| Data not appearing | Check PLX-DAQ connection status LED |
+| #REF! errors | Freeze header row in Excel template |
+| COM port missing | Reinstall Arduino USB drivers |
+
+### ⚙️ Advanced PLX-DAQ Features
+```excel
+1. Auto-formatting Rules:
+   - Green fill for "IN" status
+   - Red fill for "OUT" status
+   - Data validation for department names
+
+2. Automated Reports:
+   =COUNTIF(Sheet1!E:E, "IN")  // Total Entries
+   =UNIQUE(Sheet1!D:D)         // Department List
+   =FILTER(Sheet1!A:E, Sheet1!C:C="Varun") // User Filter
+
+3. Scheduled Backups:
+   - Use Excel's Power Query to auto-save daily copies
+   - Set up VBA macro for hourly backups
+```
+
+### 📁 Sample Excel Template Structure
+```excel
+| Date       | Time     | Name   | Department | Status |
+|------------|----------|--------|------------|--------|
+| =TODAY()   | =NOW()   | Varun  | CSE        | IN     |
+| =A2        | =B2      | Varun  | CSE        | OUT    |
+```
+
+**Pro Tip:** Use Excel's `Table Formatting` (Ctrl+T) for auto-expanding data ranges!
+
+---
+
+**Credits:**  
+PLX-DAQ implementation based on NetDevil's modified version - [GitHub Repository](https://github.com/netdevil/plx-daq)  
+*Make sure to star their repo if you find it useful!*
+```
 ## ⚙️ Configuration
 1. Find your RFID Tag UID:
    ```arduino
