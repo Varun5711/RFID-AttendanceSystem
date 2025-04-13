@@ -1,6 +1,6 @@
 # 🎓 RFID Attendance System with LCD & Buzzer Feedback 📡
 
-![Project Thumbnail](https://via.placeholder.com/800x400.png?text=RFID+Attendance+System+Project) *Add your project image here*
+![Project Thumbnail](https://via.placeholder.com/800x400.png?text=RFID+Attendance+System+Project)
 
 A smart attendance tracking system using RFID technology with visual (LCD) and audible (buzzer) feedback. Perfect for classrooms, offices, and events!
 
@@ -24,7 +24,7 @@ A smart attendance tracking system using RFID technology with visual (LCD) and a
 
 ## 🔧 Installation
 ### Hardware Setup
-![Circuit Diagram](https://via.placeholder.com/800x400.png?text=Circuit+Diagram) *Add your circuit diagram here*
+![Circuit Diagram](https://via.placeholder.com/800x400.png?text=Circuit+Diagram)
 
 1. Connect RFID Reader:
    - SDA → Pin 10
