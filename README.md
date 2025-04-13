@@ -48,7 +48,6 @@ A smart attendance tracking system using RFID technology with visual (LCD) and a
 ### Software Setup
 Here's the updated PLX-DAQ specific section for your README.md with proper credit to NetDevil's implementation:
 
-```markdown
 ## 📈 Excel Integration via PLX-DAQ (NetDevil Version)
 
 **Real-Time Excel Logging Made Easy**  
@@ -69,7 +68,6 @@ Here's the updated PLX-DAQ specific section for your README.md with proper credi
    4. Set Baud Rate: 9600
    5. Select correct COM port
    6. Click "Connect"
-   ```
 
 3. **Arduino Code Integration**
    ```arduino
