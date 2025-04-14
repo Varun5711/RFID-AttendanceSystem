@@ -142,7 +142,7 @@ sequenceDiagram
 **Credits:**  
 PLX-DAQ implementation based on NetDevil's modified version - [GitHub Repository](https://github.com/netdevil/plx-daq)  
 *Make sure to star their repo if you find it useful!*
-```
+
 ## ⚙️ Configuration
 1. Find your RFID Tag UID:
    ```arduino
