@@ -1,4 +1,4 @@
-# 🎓 RFID Attendance System with LCD & Buzzer Feedback 📡
+# RFID Attendance System with LCD & Buzzer Feedback 📡
 
 ![Project Thumbnail](https://via.placeholder.com/800x400.png?text=RFID+Attendance+System+Project)
 
