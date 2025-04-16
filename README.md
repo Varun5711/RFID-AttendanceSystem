@@ -1,6 +1,6 @@
 # RFID Attendance System with LCD & Buzzer Feedback 📡
 
-![Project Thumbnail](https://via.placeholder.com/800x400.png?text=RFID+Attendance+System+Project)
+![Project Thumbnail](https://pouch.jumpshare.com/preview/52sl3bU2-3hBKmwE09QSCUwZUstvCx6EYYjKFMo2hp7MRP3tKPGUzL2RZgoqFaeiKIVUrBkjqBolXBcvIRFRuDrc2oB6SlLwT2A5Qd86WcY)
 
 A smart attendance tracking system using RFID technology with visual (LCD) and audible (buzzer) feedback. Perfect for classrooms, offices, and events!
 
@@ -24,7 +24,7 @@ A smart attendance tracking system using RFID technology with visual (LCD) and a
 
 ## 🔧 Installation
 ### Hardware Setup
-![Circuit Diagram](https://via.placeholder.com/800x400.png?text=Circuit+Diagram)
+![Circuit Diagram](https://pouch.jumpshare.com/preview/D8fxbTGYiVJIRBhUvL6DDdDJoNsOnIjxHwaC_-4biwTmXcrr9Xk3BjRcE6V0WjMm4BlQc_Obe3opnzGWODarrZoVwW9aW9SRavyI2JYFsBs)
 
 1. Connect RFID Reader:
    - SDA → Pin 10
@@ -51,7 +51,6 @@ Here's the updated PLX-DAQ specific section for your README.md with proper credi
 ## 📈 Excel Integration via PLX-DAQ (NetDevil Version)
 
 **Real-Time Excel Logging Made Easy**  
-![PLX-DAQ Workflow](https://via.placeholder.com/800x400.png?text=PLX-DAQ+Excel+Integration)
 
 ### ⚡ PLX-DAQ Setup Guide
 1. **Download PLX-DAQ**
